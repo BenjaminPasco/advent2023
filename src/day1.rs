@@ -81,25 +81,6 @@ pub async fn solve_part_one () {
     }
 }
 
-trait GetNumber {
-    fn get_number<I>(&self, chars: I)
-    where
-        I: Iterator<Item = char>;
-}
-
-impl GetNumber for String {
-    fn get_number<I>(&self, chars: I)
-    where
-        I: Iterator<Item = char>,
-    {
-        // Your logic here
-        for c in chars {
-            // Process each character
-            println!("{}", c);
-        }
-    }
-}
-
 fn get_number<I>(chars: I, numbers: [&str; 9]) -> String
 where
     I: Iterator<Item = char>,
