@@ -79,16 +79,8 @@ fn format_data(text: &str) -> Engine {
                     start = char_index;
                 }
 
-                let next_char = line.chars().nth(char_index + 1);
-                let mut is_next_numeric = false;
-                match next_char {
-                    None => {
-                        is_next_numeric = false
-                    }
-                    Some(char) => {
-                        is_next_numeric = char.is_numeric()
-                    }
-                }
+                let next_char = line.chars().nth(char_index + 1).unwrap_or(' ');
+                let is_next_numeric = next_char.is_numeric();
 
                 if !is_next_numeric {
                     let number = Number {
