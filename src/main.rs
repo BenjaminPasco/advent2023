@@ -5,6 +5,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 mod utils;
 
 #[tokio::main]
@@ -22,9 +23,12 @@ async fn main ()  -> Result<(), Box<dyn Error>>{
     // println!("Day 4");
     // day4::solve_part_one().await;
     // day4::solve_part_two().await;
-    println!("Day 5");
+    // println!("Day 5");
     // day5::solve_part_one().await;
-    day5::solve_part_two().await;
+    // day5::solve_part_two().await;
+    println!("Day 6");
+    // day6::solve_part_one().await;
+    day6::solve_part_two().await;
     Ok(())
 }
 
